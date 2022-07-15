@@ -1,0 +1,32 @@
+GET http://localhost:3000/api/usuarios
+
+###
+POST http://localhost:3000/api/usuarios/registro
+Content-Type: application/json
+
+{
+    "username": "test-username",
+    "email": "email@test.com",
+    "password": "TEST12345",
+    "direccion": "Calle Do Testing 123",
+    "nombre": "Testeador",
+    "apellidos": "Von Testing",
+    "fecha_nacimiento": "1970-01-02",
+    "trusted": false
+}
+
+###
+
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "username": "test-username",
+    "email": "email@test.com",
+    "password": "TEST12345"
+}
+
+###
+
+GET http://localhost:3000/api/productos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
