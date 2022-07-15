@@ -8,6 +8,13 @@ var app = require('../app');
 var debug = require('debug')('cocoback:server');
 var http = require('http');
 
+// Config .env 
+require('dotenv').config();
+
+// Config de la DB
+require('../config/db');
+
+
 /**
  * Get port from environment and store in Express.
  */
