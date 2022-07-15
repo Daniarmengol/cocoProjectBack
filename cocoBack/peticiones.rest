@@ -25,3 +25,8 @@ Content-Type: application/json
     "email": "email@test.com",
     "password": "TEST12345"
 }
+
+###
+
+GET http://localhost:3000/api/productos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q

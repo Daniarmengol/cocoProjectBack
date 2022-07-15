@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 const Usuario = require('../../models/usuario.model');
+const { createToken } = require('../../helpers/utils');
 
 router.get('/', async (req, res) => {
     try {
@@ -41,10 +42,30 @@ router.post('/registro',
         } catch (err) {
             res.json({ error: err.message });
         };
-
-
-
     }
 );
+
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+
+    // Chequeamos en la DB si el user existe.
+    const user = await Usuario.getByUsername(username);
+    if (!user) {
+        return res.json({ error: 'Username y/o contraseña incorrectos. USER ERROR' });
+    };
+
+    // Comparamos la password hasheada con la de la db con el bcrypt method bcrypt.compareSync
+    const samePass = bcrypt.compareSync(password, user.password);
+    if (!samePass) {
+        return res.json({ error: 'Username y/o contraseña incorrectos. PASS ERROR' });
+    };
+
+    // Creación de token. createToken --> helpers/utils.js
+
+    res.json({
+        success: 'Login correcto.',
+        token: createToken(user)
+    });
+});
 
 module.exports = router;
