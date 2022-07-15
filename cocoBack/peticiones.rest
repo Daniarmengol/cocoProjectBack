@@ -1,6 +1,11 @@
 GET http://localhost:3000/api/usuarios
 
 ###
+
+GET http://localhost:3000/api/usuarios/d
+
+
+###
 POST http://localhost:3000/api/usuarios/registro
 Content-Type: application/json
 
@@ -29,4 +34,31 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/api/productos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+
+###
+
+GET http://localhost:3000/api/productos/categoria/videojuegos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+
+###
+
+GET http://localhost:3000/api/productos/estado/usado
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+
+###
+
+GET http://localhost:3000/api/productos/marca/ap
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+
+
+###
+
+GET http://localhost:3000/api/productos/usuario/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+
+
+###
+
+GET http://localhost:3000/api/productos/3
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q

@@ -13,6 +13,15 @@ router.get('/', async (req, res) => {
     };
 });
 
+router.get('/:nombre', async (req, res) => {
+    try {
+        const result = await Usuario.getByNombre(req.params.nombre);
+        res.json(result)
+    } catch (err) {
+        res.json({ msg: err.message, error: err })
+    }
+});
+
 router.post('/registro',
     body('username')
         .exists()

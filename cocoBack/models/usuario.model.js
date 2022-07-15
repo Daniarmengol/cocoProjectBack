@@ -17,7 +17,7 @@ const getByEmail = (email) => {
 };
 
 const getByNombre = (nombre) => {
-    return executeQuery(`SELECT * FROM usuarios WHERE nombre LIKE '%?%'`, [nombre])
+    return executeQuery(`SELECT * FROM usuarios WHERE nombre LIKE ?`, [`%${nombre}%`])
 };
 
 const create = ({ username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted }) => {
