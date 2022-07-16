@@ -2,22 +2,37 @@ GET http://localhost:3000/api/usuarios
 
 ###
 
-GET http://localhost:3000/api/usuarios/d
-
+GET http://localhost:3000/api/usuarios/5
 
 ###
+
+GET http://localhost:3000/api/usuarios/nombre/d
+
+###
+
+GET http://localhost:3000/api/usuarios/email/gmail
+
+###
+
+GET http://localhost:3000/api/usuarios/username/p
+
+###
+
+GET http://localhost:3000/api/usuarios/trust/0
+
+###
+
 POST http://localhost:3000/api/usuarios/registro
 Content-Type: application/json
 
 {
-    "username": "test-username",
-    "email": "email@test.com",
+    "username": "test-username3",
+    "email": "3email@test.com",
     "password": "TEST12345",
-    "direccion": "Calle Do Testing 123",
-    "nombre": "Testeador",
-    "apellidos": "Von Testing",
-    "fecha_nacimiento": "1970-01-02",
-    "trusted": false
+    "direccion": "Calle Do Testing 12345",
+    "nombre": "Testeador3",
+    "apellidos": "Von Testing3",
+    "fecha_nacimiento": "1970-01-04"
 }
 
 ###
@@ -26,15 +41,38 @@ POST http://localhost:3000/api/usuarios/login
 Content-Type: application/json
 
 {
-    "username": "test-username",
-    "email": "email@test.com",
+    "username": "test-username3",
+    "email": "3email@test.com",
     "password": "TEST12345"
 }
 
 ###
 
+PATCH http://localhost:3000/api/usuarios/editar/5/user-info
+Content-Type: application/json
+
+{
+    "direccion": "Not Testing Anymore 4321",
+    "nombre": "update_test1",
+    "apellidos": "Kekw",
+    "fecha_nacimiento": "1970-01-14"
+}
+
+###
+
+PATCH http://localhost:3000/api/usuarios/editar/5/login-info
+Content-Type: application/json
+
+{
+    "username": "test-username15",
+    "email": "15email@test.com",
+    "password": "testing123"
+}
+
+###############################################################
+
 GET http://localhost:3000/api/productos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImV4cERhdGUiOjE2NTgwNTY5NzEsImlhdCI6MTY1Nzk3MDU3MX0.FSCx-xh8ZhnpkrZxXLK9VXmpKBdyXZhzOQRq7vzvzWE
 
 ###
 
@@ -51,12 +89,10 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUi
 GET http://localhost:3000/api/productos/marca/ap
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
 
-
 ###
 
 GET http://localhost:3000/api/productos/usuario/2
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
-
 
 ###
 
