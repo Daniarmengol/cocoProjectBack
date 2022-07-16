@@ -29,6 +29,20 @@ const getByUsuarioId = (usuario_id) => {
     return executeQuery(`SELECT * FROM productos WHERE usuario_id = ?`, [usuario_id])
 }
 
+const create = ({ nombre, precio = null, categoria, imagen = `https://i.imgur.com/b90NgSA.png`, marca, estado, usuario_id }) => {
+    return executeQuery(`INSERT INTO productos (nombre, precio, categoria, imagen, marca, estado, usuario_id)
+    VALUES (?,?,?,?,?,?,?);`, [nombre, precio, categoria, imagen, marca, estado, usuario_id]);
+}
+
+const deleteById = (id) => {
+    return executeQuery(`DELETE FROM productos WHERE id = ?`, [id])
+}
+
+const edit = (id, { nombre, precio, categoria, imagen, marca, estado }) => {
+
+    return executeQuery(`UPDATE productos SET nombre = ?, precio = ?, categoria = ?, imagen = ?, marca = ?, estado = ? WHERE id = ?`, [nombre, precio, categoria, imagen, marca, estado, id])
+}
+
 module.exports = {
-    getAll, getByCategoria, getByEstado, getByMarca, getByNombre, getByUsuarioId, getById
+    getAll, getById, getByCategoria, getByEstado, getByMarca, getByNombre, getByUsuarioId, edit, create, deleteById
 }

@@ -62,3 +62,36 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUi
 
 GET http://localhost:3000/api/productos/3
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+
+###
+
+POST http://localhost:3000/api/productos/nuevo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Content-Type: application/json
+
+{
+    "nombre": "castlevania sotn PS1",
+    "categoria": "videojuegos",
+    "marca": "Konami",
+    "estado": "usado",
+    "usuario_id": 1
+}
+
+###
+
+DELETE  http://localhost:3000/api/productos/eliminar/8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+
+###
+
+PATCH  http://localhost:3000/api/productos/editar/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Content-Type: application/json
+
+{
+    "precio": 5.42,
+    "categoria": "videojuegos",
+    "imagen": "https://i.imgur.com/b90NgSA.png",
+    "marca": "SQ Soft",
+    "estado": "desperfectos"
+}

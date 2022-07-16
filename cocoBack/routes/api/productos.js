@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { body, validationResult } = require('express-validator');
 
 const Producto = require('../../models/producto.model')
 
@@ -43,6 +44,33 @@ router.get('/usuario/:usuario_id', (req, res) => {
         .then(result => res.json(result))
         .catch(err => res.json(err))
 });
+
+router.patch('/editar/:id', (req, res) => {
+    Producto.edit(req.params.id, req.body)
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+});
+
+router.post('/nuevo',
+    body(['nombre', 'categoria', 'estado'])
+        .exists()
+        .withMessage('el campo es obligatorio')
+    , (req, res) => {
+        const errors = validationResult(req)
+        if (!errors.isEmpty()) {
+            return res.json(errors.array())
+        }
+        Producto.create(req.body)
+            .then(result => res.json(result))
+            .catch(err => res.json(err))
+    });
+
+router.delete('/eliminar/:id', (req, res) => {
+    Producto.deleteById(req.params.id)
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+});
+
 
 
 
