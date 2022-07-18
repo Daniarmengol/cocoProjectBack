@@ -1,3 +1,7 @@
+###############################################################
+### //PETICIONES -- USUARIOS --
+###############################################################
+
 GET http://localhost:3000/api/usuarios
 
 ###
@@ -41,12 +45,12 @@ POST http://localhost:3000/api/usuarios/login
 Content-Type: application/json
 
 {
-    "username": "test-username4",
-    "email": "4email@test.com",
-    "password": "TEST4"
+    "username": "Pitagorax",
+    "email": "pbustamantebud@gmail.com",
+    "password": "P12345"
 }
 
-### //PETICIONES -- PRODUCTOS --
+###
 
 PATCH http://localhost:3000/api/usuarios/editar/7/user-info
 Content-Type: application/json
@@ -60,19 +64,21 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:3000/api/usuarios/editar/9/login-info
+PATCH http://localhost:3000/api/usuarios/editar/2/login-info
 Content-Type: application/json
 
 {
-    "username": "test-username9",
-    "email": "9email@test.com",
-    "password": "testing9"
+    "username": "Pitagorax",
+    "email": "'pbustamantebud@gmail.com'",
+    "password": "P12345"
 }
 
 ###
 
 DELETE http://localhost:3000/api/usuarios/7
 
+###############################################################
+### //PETICIONES -- PRODUCTOS --
 ###############################################################
 
 GET http://localhost:3000/api/productos
@@ -95,13 +101,13 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUi
 
 ###
 
-GET http://localhost:3000/api/productos/usuario/2
+GET http://localhost:3000/api/productos/usuario/4
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 
 ###
 
-GET http://localhost:3000/api/productos/3
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
+GET http://localhost:3000/api/productos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTgyMjc5ODAsImlhdCI6MTY1ODE0MTU4MH0.T1SztG1Wv5w9ueKWMDm_wx7hszwO4dBM8IiV4SaleRY
 
 ###
 

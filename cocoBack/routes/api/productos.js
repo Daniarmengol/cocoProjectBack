@@ -40,7 +40,7 @@ router.get('/nombre/:nombre', (req, res) => {
 });
 
 router.get('/usuario/:usuario_id', (req, res) => {
-    Producto.getByUsuarioId(req.params.usuario_id)
+    Producto.getByUsuarioId(req.user.id)
         .then(result => res.json(result))
         .catch(err => res.json(err))
 });
