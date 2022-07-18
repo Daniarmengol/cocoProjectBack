@@ -6,7 +6,7 @@ const checkToken = async (req, res, next) => {
 
     // ¿Está el token en la cabecera/header?
     if (!req.headers['authorization']) {
-        return res.json({ error: 'No llevas el token encima, go back.' });
+        return res.json({ error: 'No estás logueado.' });
     };
 
     // ¿Es el token correcto? 
@@ -16,12 +16,12 @@ const checkToken = async (req, res, next) => {
     try {
         obj = jwt.verify(token, "baba12345");
     } catch (err) {
-        return res.json({ error: 'El token no es correcto.' });
+        return res.json({ error: 'Ha habido un error, vuelve a loguearte, por favor.' });
     };
 
     // ¿Ha expirado? ahora > token.date
     if (dayjs().unix() > obj.expDate) {
-        return res.json({ error: 'Token caducado, go back home.' });
+        return res.json({ error: 'Tu sesión ha expirado, vuelve a loguearte por favor.' });
     };
 
     // console.log(obj);
