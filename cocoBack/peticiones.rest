@@ -3,6 +3,7 @@
 ###############################################################
 
 GET http://localhost:3000/api/usuarios
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTgyMjc5ODAsImlhdCI6MTY1ODE0MTU4MH0.T1SztG1Wv5w9ueKWMDm_wx7hszwO4dBM8IiV4SaleRY
 
 ###
 
@@ -26,7 +27,7 @@ GET http://localhost:3000/api/usuarios/trust/0
 
 ###
 
-POST http://localhost:3000/api/usuarios/registro
+POST http://localhost:3000/usuarios/registro
 Content-Type: application/json
 
 {
@@ -41,7 +42,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/api/usuarios/login
+POST http://localhost:3000/usuarios/login
 Content-Type: application/json
 
 {

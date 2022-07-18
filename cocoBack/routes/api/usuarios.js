@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { body, validationResult } = require('express-validator');
+/* const { body, validationResult } = require('express-validator'); */
 const bcrypt = require('bcrypt');
 const Usuario = require('../../models/usuario.model');
-const { createToken } = require('../../helpers/utils');
+/* const { createToken } = require('../../helpers/utils'); */
 
 router.get('/', async (req, res) => {
     try {
@@ -64,7 +64,7 @@ router.get('/trust/:trust', async (req, res) => {
     };
 });
 
-router.post('/registro',
+/* router.post('/registro',
     body('username')
         .exists()
         .withMessage('El campo de username es obligatorio.')
@@ -117,7 +117,7 @@ router.post('/login', async (req, res) => {
         success: 'Login correcto.',
         token: createToken(user)
     });
-});
+}); */
 
 router.patch('/editar/:userId/user-info', async (req, res) => {
     const { userId } = req.params;
