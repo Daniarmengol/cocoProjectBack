@@ -31,42 +31,42 @@ Content-Type: application/json
     "password": "TEST12345"
 }
 
-###
+### //PETICIONES -- PRODUCTOS --
 
 GET http://localhost:3000/api/productos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 
 ###
 
 GET http://localhost:3000/api/productos/categoria/videojuegos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 
 ###
 
 GET http://localhost:3000/api/productos/estado/usado
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 
 ###
 
 GET http://localhost:3000/api/productos/marca/ap
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 
 
 ###
 
 GET http://localhost:3000/api/productos/usuario/2
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 
 
 ###
 
 GET http://localhost:3000/api/productos/3
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 
 ###
 
 POST http://localhost:3000/api/productos/nuevo
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 Content-Type: application/json
 
 {
@@ -79,19 +79,20 @@ Content-Type: application/json
 
 ###
 
-DELETE  http://localhost:3000/api/productos/eliminar/8
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+DELETE  http://localhost:3000/api/productos/eliminar/10
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 
 ###
 
 PATCH  http://localhost:3000/api/productos/editar/1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgwMDU0MDgsImlhdCI6MTY1NzkxOTAwOH0.Tv-dZuG4dpbNlzBn-Nwww1n-dsfIUpIvVYjxWGuPH8Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cERhdGUiOjE2NTgyMTkwMTAsImlhdCI6MTY1ODEzMjYxMH0.VivCgpwzYSV_L6XvByLd9JPDeUvQkl9BZJWd7N0W7xg
 Content-Type: application/json
 
 {
-    "precio": 5.42,
+    "nombre": "Kingdom Hearts 1",
+    "precio": 65,
     "categoria": "videojuegos",
     "imagen": "https://i.imgur.com/b90NgSA.png",
     "marca": "SQ Soft",
-    "estado": "desperfectos"
+    "estado": "usado"
 }
