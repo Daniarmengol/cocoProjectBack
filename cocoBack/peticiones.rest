@@ -26,12 +26,12 @@ POST http://localhost:3000/api/usuarios/registro
 Content-Type: application/json
 
 {
-    "username": "test-username3",
-    "email": "3email@test.com",
-    "password": "TEST12345",
-    "direccion": "Calle Do Testing 12345",
-    "nombre": "Testeador3",
-    "apellidos": "Von Testing3",
+    "username": "test-username4",
+    "email": "4email@test.com",
+    "password": "TEST4",
+    "direccion": "Calle Do Testing 4",
+    "nombre": "Testeador4",
+    "apellidos": "Von Testing4",
     "fecha_nacimiento": "1970-01-04"
 }
 
@@ -41,33 +41,37 @@ POST http://localhost:3000/api/usuarios/login
 Content-Type: application/json
 
 {
-    "username": "test-username3",
-    "email": "3email@test.com",
-    "password": "TEST12345"
+    "username": "test-username4",
+    "email": "4email@test.com",
+    "password": "TEST4"
 }
 
 ###
 
-PATCH http://localhost:3000/api/usuarios/editar/5/user-info
+PATCH http://localhost:3000/api/usuarios/editar/7/user-info
 Content-Type: application/json
 
 {
-    "direccion": "Not Testing Anymore 4321",
-    "nombre": "update_test1",
-    "apellidos": "Kekw",
-    "fecha_nacimiento": "1970-01-14"
+    "direccion": "Not Testing Anymore 7",
+    "nombre": "test-update7",
+    "apellidos": "Updated 7",
+    "fecha_nacimiento": "1970-01-07"
 }
 
 ###
 
-PATCH http://localhost:3000/api/usuarios/editar/5/login-info
+PATCH http://localhost:3000/api/usuarios/editar/7/login-info
 Content-Type: application/json
 
 {
-    "username": "test-username15",
-    "email": "15email@test.com",
-    "password": "testing123"
+    "username": "test-username7",
+    "email": "7email@test.com",
+    "password": "testing7"
 }
+
+###
+
+DELETE http://localhost:3000/api/usuarios/7
 
 ###############################################################
 

@@ -126,7 +126,7 @@ router.patch('/editar/:userId/user-info', async (req, res) => {
         res.json(result);
     } catch (err) {
         res.json({ msg: err.message, error: err })
-    }
+    };
 });
 
 router.patch('/editar/:userId/login-info', async (req, res) => {
@@ -135,42 +135,49 @@ router.patch('/editar/:userId/login-info', async (req, res) => {
     const { username, email } = req.body;
     let { password } = req.body;
 
-
     const userCheck = await Usuario.getStrictUsername(username);
-    console.log(userCheck);
-    console.log(username);
     if (username !== user.username && userCheck) return res.json({ error: 'El usuario ya existe' });
 
     const emailCheck = await Usuario.getStrictEmail(email);
-    console.log(email);
-    console.log(emailCheck);
     if (email !== user.email && emailCheck) return res.json({ error: 'El email ya existe' });
 
     const passCheck = bcrypt.compareSync(password, user.password);
-
     if (passCheck) {
-        console.log('passCheck okay, misma password, no la cambio');
+
         try {
             const result = await Usuario.updateLoginInfo(userId, req.body);
-            res.json(result);
+            res.json({ success: 'Usuario editado correctamente!', result });
         } catch (err) {
             res.json({ msg: err.message, error: err });
         };
+
     } else {
-        console.log(user.password, password);
-        console.log('passCheck else, CAMBIO la password');
-        password = bcrypt.hashSync(password, 13);
-        console.log(user.password, password);
+        const new_pass = bcrypt.hashSync(password, 13);
+        const newInfo = {
+            "username": username,
+            "email": email,
+            "password": new_pass
+        };
 
         try {
-            const result = await Usuario.updateLoginInfo(userId, req.body);
-            res.json(result);
+            const result = await Usuario.updateLoginInfo(userId, newInfo);
+            res.json({ success: 'Usuario editado correctamente!', result });
         } catch (err) {
             res.json({ msg: err.message, error: err });
         };
 
     };
-    console.log(user.password);
+});
+
+router.delete('/:userId', async (req, res) => {
+    const { userId } = req.params;
+    const user = await Usuario.getById(userId);
+    try {
+        await Usuario.deleteById(userId);
+        res.json({ success: 'Usuario borrado correctamente.', user });
+    } catch (err) {
+        res.json({ msg: err.message, error: err });
+    };
 });
 
 module.exports = router;
