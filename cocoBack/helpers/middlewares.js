@@ -27,7 +27,7 @@ const checkToken = async (req, res, next) => {
     // console.log(obj);
     // Recuperamos user que intenta loguearse
     const user = await Usuario.getById(obj.userId);
-    req.user = user;
+    req.user = user; // req.user está disponible a partir de checkToken/...
 
     next();
 };

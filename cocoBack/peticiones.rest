@@ -26,13 +26,13 @@ POST http://localhost:3000/api/usuarios/registro
 Content-Type: application/json
 
 {
-    "username": "test-username4",
-    "email": "4email@test.com",
-    "password": "TEST4",
-    "direccion": "Calle Do Testing 4",
-    "nombre": "Testeador4",
-    "apellidos": "Von Testing4",
-    "fecha_nacimiento": "1970-01-04"
+    "username": "test-username9",
+    "email": "9email@test.com",
+    "password": "TEST9",
+    "direccion": "Calle Do Testing 9",
+    "nombre": "Testeador9",
+    "apellidos": "Von Testing9",
+    "fecha_nacimiento": "1970-01-09"
 }
 
 ###
@@ -60,13 +60,13 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:3000/api/usuarios/editar/7/login-info
+PATCH http://localhost:3000/api/usuarios/editar/9/login-info
 Content-Type: application/json
 
 {
-    "username": "test-username7",
-    "email": "7email@test.com",
-    "password": "testing7"
+    "username": "test-username9",
+    "email": "9email@test.com",
+    "password": "testing9"
 }
 
 ###

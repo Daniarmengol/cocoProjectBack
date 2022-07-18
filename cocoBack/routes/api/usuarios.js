@@ -141,31 +141,13 @@ router.patch('/editar/:userId/login-info', async (req, res) => {
     const emailCheck = await Usuario.getStrictEmail(email);
     if (email !== user.email && emailCheck) return res.json({ error: 'El email ya existe' });
 
-    const passCheck = bcrypt.compareSync(password, user.password);
-    if (passCheck) {
+    req.body.password = bcrypt.hashSync(password, 13);
 
-        try {
-            const result = await Usuario.updateLoginInfo(userId, req.body);
-            res.json({ success: 'Usuario editado correctamente!', result });
-        } catch (err) {
-            res.json({ msg: err.message, error: err });
-        };
-
-    } else {
-        const new_pass = bcrypt.hashSync(password, 13);
-        const newInfo = {
-            "username": username,
-            "email": email,
-            "password": new_pass
-        };
-
-        try {
-            const result = await Usuario.updateLoginInfo(userId, newInfo);
-            res.json({ success: 'Usuario editado correctamente!', result });
-        } catch (err) {
-            res.json({ msg: err.message, error: err });
-        };
-
+    try {
+        const result = await Usuario.updateLoginInfo(userId, req.body);
+        res.json({ success: 'Usuario editado correctamente!', result });
+    } catch (err) {
+        res.json({ msg: err.message, error: err });
     };
 });
 
