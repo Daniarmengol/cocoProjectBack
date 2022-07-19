@@ -39,8 +39,8 @@ const create = ({ username, email, password, direccion, nombre, apellidos, fecha
         [username, email, password, direccion, nombre, apellidos, fecha_nacimiento]);
 };
 
-const update = (userId, { direccion, nombre, apellidos, fecha_nacimiento }) => {
-    return executeQuery(`UPDATE usuarios SET direccion = ?, nombre = ?, apellidos = ?, fecha_nacimiento = ? WHERE id = ?`, [direccion, nombre, apellidos, fecha_nacimiento, userId])
+const update = (userId, { direccion, nombre, apellidos, fecha_nacimiento, avatar }) => {
+    return executeQuery(`UPDATE usuarios SET direccion = ?, nombre = ?, apellidos = ?, fecha_nacimiento = ?, avatar = ? WHERE id = ?`, [direccion, nombre, apellidos, fecha_nacimiento, avatar, userId])
 }
 
 const updateLoginInfo = (userId, { username, email, password }) => {

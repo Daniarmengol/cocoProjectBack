@@ -1,10 +1,11 @@
 const router = require('express').Router();
-/* const { body, validationResult } = require('express-validator'); */
+const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 const Usuario = require('../../models/usuario.model');
-/* const { createToken } = require('../../helpers/utils'); */
+const { createToken } = require('../../helpers/utils');
+const { checkToken } = require('../../helpers/middlewares');
 
-router.get('/', async (req, res) => {
+router.get('/', checkToken, async (req, res) => {
     try {
         const result = await Usuario.getAll();
         res.json(result);
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
     };
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', checkToken, async (req, res) => {
     try {
         const result = await Usuario.getById(req.params.id);
         res.json(result);
@@ -22,7 +23,7 @@ router.get('/:id', async (req, res) => {
     };
 });
 
-router.get('/username/:username', async (req, res) => {
+router.get('/username/:username', checkToken, async (req, res) => {
     try {
         const result = await Usuario.getByUsername(req.params.username);
         res.json(result);
@@ -31,7 +32,7 @@ router.get('/username/:username', async (req, res) => {
     };
 });
 
-router.get('/email/:email', async (req, res) => {
+router.get('/email/:email', checkToken, async (req, res) => {
     try {
         const result = await Usuario.getByEmail(req.params.email);
         res.json(result);
@@ -40,7 +41,7 @@ router.get('/email/:email', async (req, res) => {
     };
 });
 
-router.get('/nombre/:nombre', async (req, res) => {
+router.get('/nombre/:nombre', checkToken, async (req, res) => {
     try {
         const result = await Usuario.getByNombre(req.params.nombre);
         res.json(result)
@@ -49,7 +50,7 @@ router.get('/nombre/:nombre', async (req, res) => {
     };
 });
 
-router.get('/trust/:trust', async (req, res) => {
+router.get('/trust/:trust', checkToken, async (req, res) => {
     // type of req.params es STRING
     // el if rechaza TODO lo que no sean trusts aceptados en la DB.
     if (req.params.trust !== '1' && req.params.trust !== '0') {
@@ -64,7 +65,7 @@ router.get('/trust/:trust', async (req, res) => {
     };
 });
 
-/* router.post('/registro',
+router.post('/registro',
     body('username')
         .exists()
         .withMessage('El campo de username es obligatorio.')
@@ -117,9 +118,9 @@ router.post('/login', async (req, res) => {
         success: 'Login correcto.',
         token: createToken(user)
     });
-}); */
+});
 
-router.patch('/editar/:userId/user-info', async (req, res) => {
+router.patch('/editar/:userId/user-info', checkToken, async (req, res) => {
     const { userId } = req.params;
     try {
         const result = await Usuario.update(userId, req.body);
@@ -129,7 +130,7 @@ router.patch('/editar/:userId/user-info', async (req, res) => {
     };
 });
 
-router.patch('/editar/:userId/login-info', async (req, res) => {
+router.patch('/editar/:userId/login-info', checkToken, async (req, res) => {
     const { userId } = req.params;
     const user = await Usuario.getById(userId);
     const { username, email } = req.body;
@@ -151,7 +152,7 @@ router.patch('/editar/:userId/login-info', async (req, res) => {
     };
 });
 
-router.delete('/:userId', async (req, res) => {
+router.delete('/:userId', checkToken, async (req, res) => {
     const { userId } = req.params;
     const user = await Usuario.getById(userId);
     try {
