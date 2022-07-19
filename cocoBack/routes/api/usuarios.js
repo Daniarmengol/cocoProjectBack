@@ -88,9 +88,8 @@ router.post('/registro',
         // try encriptado + creación del usuario
         try {
             req.body.password = bcrypt.hashSync(req.body.password, 13);
-            const result = await Usuario.create(req.body);
-            console.log(result);
-            res.json(result);
+            await Usuario.create(req.body);
+            res.json({ success: 'Usuario registrado correctamente.', user: req.body });
         } catch (err) {
             res.json({ error: err.message });
         };
