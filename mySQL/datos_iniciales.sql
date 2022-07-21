@@ -2,18 +2,26 @@
 
 -- SELECT * FROM usuarios;
 
-INSERT INTO usuarios (username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted)
-VALUES ('J1Loop', 'jorge.ua.1996@gmail.com', 'J12345', 'Juan II 13 Pinto Madrid 28320', 'Jorge', 'Utrera Alarcón', '1996-01-12', true);
+-- SELECT * 
+-- FROM usuarios 
+-- WHERE username LIKE '%t%';
 
-INSERT INTO usuarios (username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted) 
-VALUES ('Pitagorax', 'pbustamantebud@gmail.com', 'P12345', 'Avda Bruselas 2 Algeciras Cádiz 11205', 'Pedro Ángel', 'Bustamante Budiño', '1995-10-06', false);
+INSERT INTO usuarios (username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted, avatar)
+VALUES ('J1Loop', 'jorge.ua.1996@gmail.com', '$2b$13$gzTWBH0xnwAaHLXnkbkBIeRhSZwKjFXD5yQEkIVtpzrJ4qFvBcdLa', 'Juan II 13 Pinto Madrid 28320', 'Jorge', 'Utrera Alarcón', '1996-01-12', true, 'https://i.imgur.com/gXnVbnc.png');
 
-INSERT INTO usuarios (username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted) 
-VALUES ('Gtuni', 'danielito486@gmail.com', 'D12345', 'Avda América Urb Triana 22 11204', 'Daniel', 'Fernández Armengol', '1996-09-05', true);
+INSERT INTO usuarios (username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted, avatar) 
+VALUES ('Pitagorax', 'pbustamantebud@gmail.com', '$2b$13$FNNSAp343LQGIYA1AQxYIOV0sSb4AoieDalsk79n5zpTnyvGH6pFq', 'Avda Bruselas 2 Algeciras Cádiz 11205', 'Pedro Ángel', 'Bustamante Budiño', '1995-10-06', false, 'https://i.imgur.com/I3CoHGv.png');
+
+INSERT INTO usuarios (username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted, avatar) 
+VALUES ('Gtuni', 'danielito486@gmail.com', '$2b$13$iBjJeyhPcia9A96vpGhCnu5OPBOKgFIOX//e6U9cgteQyIJoej4S2', 'Avda América Urb Triana 22 11204', 'Daniel', 'Fernández Armengol', '1996-09-05', true, 'https://i.imgur.com/i2RTPH1.jpeg');
 
 -- #####################################
 
 -- SELECT * FROM productos;
+
+-- SELECT * 
+-- FROM productos
+-- WHERE marca LIKE '%a%';
 
 INSERT INTO productos (nombre, precio, categoria, marca, estado, usuario_id) VALUES ('Kingdom Hearts 1', 5.42, 'videojuegos', 'SQ Soft', 'desperfectos', 3);
 INSERT INTO productos (nombre, precio, categoria, marca, estado, usuario_id) VALUES ('Malenia Figure', 300, 'figuras', 'Bandai Namco', 'usado', 2);
