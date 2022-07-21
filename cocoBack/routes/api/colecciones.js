@@ -38,10 +38,7 @@ router.patch('/editar/:id', (req, res) => {
 });
 
 router.post('/nuevo',
-    body(['nombre', 'categoria'])
-        .exists()
-        .withMessage('el campo es obligatorio')
-    , (req, res) => {
+    (req, res) => {
         const errors = validationResult(req)
         if (!errors.isEmpty()) {
             return res.json(errors.array())

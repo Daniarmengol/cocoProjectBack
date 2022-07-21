@@ -129,6 +129,23 @@ router.post('/login', async (req, res) => {
     });
 });
 
+router.post('/emailduplicado', async (req, res) => {
+
+    try {
+        const result = await Usuario.getStrictEmail(req.body.email);
+        if (result) {
+            return res.json({ response: true })
+        } else {
+            return res.json({ response: false })
+        }
+
+    } catch (err) {
+        res.json({ error: err.message });
+    };
+
+
+})
+
 router.patch('/editar/:userId/user-info', checkToken, async (req, res) => {
     const { userId } = req.params;
     try {

@@ -168,3 +168,12 @@ Content-Type: application/json
     "marca": "SQ Soft",
     "estado": "usado"
 }
+
+###
+
+POST  http://localhost:3000/api/usuarios/emailduplicado
+Content-Type: application/json
+
+{
+    "email": "danielito486@gmail.com"
+}
