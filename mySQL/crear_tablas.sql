@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `coco_db`.`usuarios` (
   `nombre` VARCHAR(25) NOT NULL,
   `apellidos` VARCHAR(60) NOT NULL,
   `fecha_nacimiento` DATE NOT NULL,
+  `avatar` VARCHAR(200) NOT NULL DEFAULT 'https://i.imgur.com/b90NgSA.png',
   `trusted` TINYINT NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,

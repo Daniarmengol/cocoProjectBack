@@ -53,6 +53,7 @@ router.get('/nombre/:nombre', checkToken, async (req, res) => {
 router.get('/trust/:trust', checkToken, async (req, res) => {
     // type of req.params es STRING
     // el if rechaza TODO lo que no sean trusts aceptados en la DB.
+    /* parseInt req.params.trust */
     if (req.params.trust !== '1' && req.params.trust !== '0') {
         return res.json({ error: 'Trust debe ser 1=true o 0=false.' });
     };
@@ -63,6 +64,15 @@ router.get('/trust/:trust', checkToken, async (req, res) => {
     } catch (err) {
         res.json({ msg: err.message, error: err });
     };
+});
+
+router.get('/rand/trusted', checkToken, (req, res) => {
+    console.log(req.user)
+    Usuario.getRandomTrusted()
+        .then(result => {
+            res.json(result)
+        })
+        .catch(err => res.json(err))
 });
 
 router.post('/registro',

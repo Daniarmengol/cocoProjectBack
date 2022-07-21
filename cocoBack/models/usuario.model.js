@@ -32,6 +32,10 @@ const getByTrust = (trusted) => {
     return executeQuery(`SELECT * FROM usuarios WHERE trusted = ?`, [trusted])
 }
 
+const getRandomTrusted = () => {
+    return executeQuery(`SELECT * FROM usuarios WHERE trusted = 1 ORDER BY rand() LIMIT 1`)
+}
+
 const create = ({ username, email, password, direccion, nombre, apellidos, fecha_nacimiento }) => {
     return executeQuery(
         `INSERT INTO usuarios (username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted)
@@ -52,4 +56,4 @@ const deleteById = (userId) => {
 }
 
 
-module.exports = { getAll, getById, getByUsername, getStrictUsername, getByEmail, getStrictEmail, getByNombre, getByTrust, create, update, updateLoginInfo, deleteById };
+module.exports = { getAll, getById, getByUsername, getStrictUsername, getByEmail, getStrictEmail, getByNombre, getByTrust, create, update, updateLoginInfo, deleteById, getRandomTrusted };

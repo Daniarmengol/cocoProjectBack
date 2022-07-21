@@ -12,6 +12,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUi
 
 ###
 
+GET http://localhost:3000/api/usuarios/rand/trusted
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg0Nzk3NTIsImlhdCI6MTY1ODM5MzM1Mn0.FzG8SyJjb4npRZho-VDxrUZC8H0cSQaA-nS-KZsiBjg
+
+###
+
 GET http://localhost:3000/api/usuarios/nombre/d
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NTgzMDM1NTYsImlhdCI6MTY1ODIxNzE1Nn0.bkFFvmRKDNT_4TyPuWdN5hE2m6UYiFhqtwdxSEHTPLc
 
@@ -96,6 +101,12 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUi
 
 ###
 
+GET http://localhost:3000/api/productos/productos_venta
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NTgzMDM1NTYsImlhdCI6MTY1ODIxNzE1Nn0.bkFFvmRKDNT_4TyPuWdN5hE2m6UYiFhqtwdxSEHTPLc
+
+
+###
+
 GET http://localhost:3000/api/productos/categoria/videojuegos
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NTgzMDM1NTYsImlhdCI6MTY1ODIxNzE1Nn0.bkFFvmRKDNT_4TyPuWdN5hE2m6UYiFhqtwdxSEHTPLc
 
@@ -118,6 +129,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUi
 
 GET http://localhost:3000/api/productos/2
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NTgzMDM1NTYsImlhdCI6MTY1ODIxNzE1Nn0.bkFFvmRKDNT_4TyPuWdN5hE2m6UYiFhqtwdxSEHTPLc
+
+###
+
+GET http://localhost:3000/api/productos/nombre/malenia/categoria/figuras/precioMax/500/precioMin/15/marca/bandai/estado/usado
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NTgzMDM1NTYsImlhdCI6MTY1ODIxNzE1Nn0.bkFFvmRKDNT_4TyPuWdN5hE2m6UYiFhqtwdxSEHTPLc
 
 ###
 

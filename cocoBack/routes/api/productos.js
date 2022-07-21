@@ -9,6 +9,12 @@ router.get('/', (req, res) => {
         .catch(err => res.json(err))
 });
 
+router.get('/productos_venta', (req, res) => {
+    Producto.getProductosVenta()
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+});
+
 router.get('/:id', (req, res) => {
     Producto.getById(req.params.id)
         .then(result => res.json(result))
@@ -41,6 +47,12 @@ router.get('/nombre/:nombre', (req, res) => {
 
 router.get('/usuario/:usuario_id', (req, res) => {
     Producto.getByUsuarioId(req.user.id)
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+});
+
+router.get('/nombre/:nombre/categoria/:categoria/precioMax/:precioMax/precioMin/:precioMin/marca/:marca/estado/:estado', (req, res) => {
+    Producto.getSearch(req.body)
         .then(result => res.json(result))
         .catch(err => res.json(err))
 });
