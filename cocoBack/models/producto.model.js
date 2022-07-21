@@ -42,7 +42,7 @@ const getByUsuarioId = (usuario_id) => {
 }
 
 const getSearch = ({ nombre, categoria, marca, precioMax, precioMin, estado }) => {
-    return executeQuery(`SELECT * FROM productos WHERE nombre LIKE ? AND categoria = ? AND marca LIKE ? AND precio <= ? AND precio >= ? AND estado = ?`, [`%${nombre}%`, categoria, `%${marca}%`, precioMax, precioMin, estado])
+    return executeQuery(`SELECT * FROM productos WHERE nombre LIKE ? AND categoria LIKE ? AND marca LIKE ? AND precio <= ? AND precio >= ? AND estado = ?`, [`%${nombre}%`, categoria, `%${marca}%`, precioMax, precioMin, estado])
 }
 
 
