@@ -12,12 +12,11 @@ const getProductosVenta = () => {
     and productos.precio is not null`)
 }
 
-const getProductosVentaFiltred = () => {
-    return executeQuery()
-}
-
 const getById = (id) => {
-    return executeQueryOne(`SELECT * FROM productos WHERE id = ?`, [id])
+    return executeQueryOne(`select productos.*, usuarios.username as username, usuarios.trusted as trusted, usuarios.avatar as avatar
+    from productos, usuarios
+    where productos.usuario_id = usuarios.id
+    and productos.id = ?`, [id])
 }
 
 const getByCategoria = (categoria) => {

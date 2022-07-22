@@ -127,7 +127,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUi
 
 ###
 
-GET http://localhost:3000/api/productos/2
+GET http://localhost:3000/api/productos/producto/2
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NTgzMDM1NTYsImlhdCI6MTY1ODIxNzE1Nn0.bkFFvmRKDNT_4TyPuWdN5hE2m6UYiFhqtwdxSEHTPLc
 
 ###

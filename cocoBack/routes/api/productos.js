@@ -15,7 +15,7 @@ router.get('/productos_venta', (req, res) => {
         .catch(err => res.json(err))
 });
 
-router.get('/:id', (req, res) => {
+router.get('/producto/:id', (req, res) => {
     Producto.getById(req.params.id)
         .then(result => res.json(result))
         .catch(err => res.json(err))
