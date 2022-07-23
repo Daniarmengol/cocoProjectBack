@@ -15,7 +15,7 @@ router.get('/productos_venta', (req, res) => {
         .catch(err => res.json(err))
 });
 
-router.get('/:id', (req, res) => {
+router.get('/producto/:id', (req, res) => {
     Producto.getById(req.params.id)
         .then(result => res.json(result))
         .catch(err => res.json(err))
@@ -51,7 +51,7 @@ router.get('/usuario/:usuario_id', (req, res) => {
         .catch(err => res.json(err))
 });
 
-router.get('/nombre/:nombre/categoria/:categoria/precioMax/:precioMax/precioMin/:precioMin/marca/:marca/estado/:estado', (req, res) => {
+router.get('/busqueda/:nombre/:categoria/:precioMax/:precioMin/:marca/:estado', (req, res) => {
     Producto.getSearch(req.body)
         .then(result => res.json(result))
         .catch(err => res.json(err))
