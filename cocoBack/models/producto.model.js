@@ -9,7 +9,8 @@ const getProductosVenta = () => {
     return executeQuery(`select productos.*, usuarios.username, usuarios.trusted
     from productos, usuarios
     where productos.usuario_id = usuarios.id
-    and productos.precio is not null`)
+    and productos.precio is not null
+    order by productos.id desc`)
 }
 
 const getById = (id) => {
@@ -40,8 +41,10 @@ const getByUsuarioId = (usuario_id) => {
     return executeQuery(`SELECT * FROM productos WHERE usuario_id = ?`, [usuario_id])
 }
 
-const getSearch = ({ nombre, categoria, marca, precioMax, precioMin, estado }) => {
-    return executeQuery(`SELECT * FROM productos WHERE nombre LIKE ? AND categoria LIKE ? AND marca LIKE ? AND precio <= ? AND precio >= ? AND estado = ?`, [`%${nombre}%`, categoria, `%${marca}%`, precioMax, precioMin, estado])
+const getSearch = ({ nombre, username, categoria, marca, precioMax, precioMin, estado }) => {
+
+    console.log(nombre, username, categoria, marca, precioMax, precioMin, estado)
+    return executeQuery(`SELECT p.*, u.username as username FROM productos as p, usuarios as u WHERE p.nombre LIKE ? AND u.username LIKE ? AND p.categoria LIKE ? AND p.marca LIKE ? AND p.estado LIKE ? AND p.precio <= ? AND p.precio >= ? AND u.id = p.usuario_id order by p.id desc`, [`%${nombre}%`, `%${username}%`, `%${categoria}%`, `%${marca}%`, `%${estado}%`, precioMax, precioMin])
 }
 
 
