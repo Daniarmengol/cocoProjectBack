@@ -96,9 +96,13 @@ router.get('/trust/:trust', checkToken, async (req, res) => {
 router.get('/rand/trusted', checkToken, (req, res) => {
     console.log(req.user)
     Usuario.getRandomTrusted()
-        .then(result => {
-            res.json(result)
-        })
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+});
+
+router.get('/mis-productos/:id', (req, res) => {
+    Usuario.getProductosByUser(req.params.id)
+        .then(result => res.json(result))
         .catch(err => res.json(err))
 });
 

@@ -196,3 +196,8 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 
 GET http://localhost:3000/api/usuarios/token/check
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+
+###
+
+GET http://localhost:3000/api/usuarios/mis-productos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
