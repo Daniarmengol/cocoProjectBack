@@ -26,7 +26,7 @@ router.get('/nombre/:nombre', (req, res) => {
 });
 
 router.get('/usuario/:usuario_id', (req, res) => {
-    Coleccion.getByUsuarioId(req.user.id)
+    Coleccion.getCollectionByUserId(req.user.id)
         .then(result => res.json(result))
         .catch(err => res.json(err))
 });
