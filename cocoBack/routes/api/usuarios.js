@@ -32,9 +32,27 @@ router.get('/username/:username', checkToken, async (req, res) => {
     };
 });
 
+router.get('/username/strict/:username', checkToken, async (req, res) => {
+    try {
+        const result = await Usuario.getStrictUsername(req.params.username);
+        res.json(result);
+    } catch (err) {
+        res.json({ msg: err.message, error: err });
+    };
+});
+
 router.get('/email/:email', checkToken, async (req, res) => {
     try {
         const result = await Usuario.getByEmail(req.params.email);
+        res.json(result);
+    } catch (err) {
+        res.json({ msg: err.message, error: err });
+    };
+});
+
+router.get('/email/strict/:email', checkToken, async (req, res) => {
+    try {
+        const result = await Usuario.getStrictEmail(req.params.email);
         res.json(result);
     } catch (err) {
         res.json({ msg: err.message, error: err });
@@ -75,25 +93,11 @@ router.get('/rand/trusted', checkToken, (req, res) => {
         .catch(err => res.json(err))
 });
 
-router.post('/registro',
-    body('username')
-        .exists()
-        .withMessage('El campo de username es obligatorio.')
-        .isLength({ min: 4, max: 15 })
-        .withMessage('El campo username debe tener una longitud entre 4 y 15 caracteres.'),
-    body('email')
-        .isEmail()
-        .withMessage('El formato del email es incorrecto.'),
-    body('password')
-        .exists()
-        .withMessage('Debes introducir una contraseña.')
-    , async (req, res) => {
-        // Comprobar errores de las validaciones.
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.json(errors.array());
-        };
+router.post('/registro', async (req, res) => {
+    const user = await Usuario.getStrictUsername(req.body.id);
+    const user2 = await Usuario.getByEmail(req.body.email);
 
+    if (user.username !== req.body.username || user2.email !== req.body.email) {
         // require bcrypt para encriptar la password
         // try encriptado + creación del usuario
         try {
@@ -103,7 +107,12 @@ router.post('/registro',
         } catch (err) {
             res.json({ error: err.message });
         };
+    } else {
+        res.json({ error: 'Usuario duplicado.' });
     }
+
+
+}
 );
 
 router.post('/login', async (req, res) => {
