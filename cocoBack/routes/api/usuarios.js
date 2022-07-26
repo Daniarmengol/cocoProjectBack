@@ -68,6 +68,15 @@ router.get('/nombre/:nombre', checkToken, async (req, res) => {
     };
 });
 
+router.get('/token/check', checkToken, async (req, res) => {
+    try {
+        const result = await Usuario.getById(req.user.id)
+        res.json(result)
+    } catch (err) {
+        res.json({ msg: err.message, error: err })
+    }
+});
+
 router.get('/trust/:trust', checkToken, async (req, res) => {
     // type of req.params es STRING
     // el if rechaza TODO lo que no sean trusts aceptados en la DB.
@@ -94,10 +103,15 @@ router.get('/rand/trusted', checkToken, (req, res) => {
 });
 
 router.post('/registro', async (req, res) => {
-    const user = await Usuario.getStrictUsername(req.body.id);
-    const user2 = await Usuario.getByEmail(req.body.email);
+    console.log(req.body)
 
-    if (user.username !== req.body.username || user2.email !== req.body.email) {
+    const user = await Usuario.getStrictUsername(req.body.username);
+    const user2 = await Usuario.getStrictEmail(req.body.email);
+
+    console.log('user', user);
+    console.log('user2', user2);
+
+    if (user === null && user2 === null) {
         // require bcrypt para encriptar la password
         // try encriptado + creación del usuario
         try {
@@ -108,7 +122,7 @@ router.post('/registro', async (req, res) => {
             res.json({ error: err.message });
         };
     } else {
-        res.json({ error: 'Usuario duplicado.' });
+        res.json({ error: 'Usuario o email duplicado.' });
     }
 
 
