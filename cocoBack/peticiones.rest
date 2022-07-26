@@ -132,12 +132,8 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 
 ###
 
-<<<<<<< Updated upstream
-
-=======
 GET http://localhost:3000/api/productos/nombre/malenia/categoria/figuras/precioMax/500/precioMin/15/marca/bandai/estado/usado
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg3NjU3ODgsImlhdCI6MTY1ODY3OTM4OH0.QUxvYKYfSmBWzX9lLvr9G_HfRdDmDcQO0Gc_qSDPIZY
->>>>>>> Stashed changes
 
 ###
 
