@@ -75,6 +75,12 @@ router.get('/rand/trusted', checkToken, (req, res) => {
         .catch(err => res.json(err))
 });
 
+router.get('/mis-Productos/:userId', checkToken, (req, res) => {
+    Usuario.getProductosByUser(req.params.userId)
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+});
+
 router.post('/registro',
     body('username')
         .exists()

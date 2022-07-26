@@ -28,12 +28,17 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUi
 ###
 
 GET http://localhost:3000/api/usuarios/username/p
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NTgzMDM1NTYsImlhdCI6MTY1ODIxNzE1Nn0.bkFFvmRKDNT_4TyPuWdN5hE2m6UYiFhqtwdxSEHTPLc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MTY5MzIsImlhdCI6MTY1ODgzMDUzMn0.dPzxQHvD9LtEpxFSULeHaRF05v-OsMDbXaOikAJnx_c
 
 ###
 
 GET http://localhost:3000/api/usuarios/trust/0
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NTgzMDM1NTYsImlhdCI6MTY1ODIxNzE1Nn0.bkFFvmRKDNT_4TyPuWdN5hE2m6UYiFhqtwdxSEHTPLc
+
+###
+
+GET http://localhost:3000/api/usuarios/mis-productos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MTY5MzIsImlhdCI6MTY1ODgzMDUzMn0.dPzxQHvD9LtEpxFSULeHaRF05v-OsMDbXaOikAJnx_c
 
 ###
 
