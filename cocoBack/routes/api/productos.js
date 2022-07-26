@@ -57,7 +57,7 @@ router.post('/productos_venta/busqueda', (req, res) => {
         nombre: (req.body.nombre === undefined) ? "" : req.body.nombre,
         username: (req.body.username === undefined) ? "" : req.body.username,
         categoria: (req.body.categoria === undefined) ? "" : req.body.categoria,
-        marca: (req.body.marca === undefined) ? "" : req.body.marca,
+        marca: (req.body.marca === undefined) ? null : req.body.marca,
         precioMax: (req.body.precioMax === undefined || req.body.precioMax === "") ? 99999 : parseInt(req.body.precioMax),
         precioMin: (req.body.precioMin === undefined || req.body.precioMin === "") ? 0 : parseInt(req.body.precioMin),
         estado: (req.body.estado === undefined) ? "" : req.body.estado,

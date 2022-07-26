@@ -37,6 +37,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 
 ###
 
+GET http://localhost:3000/api/usuarios/mis-productos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MTY5MzIsImlhdCI6MTY1ODgzMDUzMn0.dPzxQHvD9LtEpxFSULeHaRF05v-OsMDbXaOikAJnx_c
+
+###
+
 POST http://localhost:3000/api/usuarios/registro
 Content-Type: application/json
 

@@ -44,7 +44,7 @@ const getByUsuarioId = (usuario_id) => {
 const getSearch = ({ nombre, username, categoria, marca, precioMax, precioMin, estado }) => {
 
     console.log(nombre, username, categoria, marca, precioMax, precioMin, estado)
-    return executeQuery(`SELECT p.*, u.username as username FROM productos as p, usuarios as u WHERE p.nombre LIKE ? AND u.username LIKE ? AND p.categoria LIKE ? AND p.marca LIKE ? AND p.estado LIKE ? AND p.precio <= ? AND p.precio >= ? AND u.id = p.usuario_id order by p.id desc`, [`%${nombre}%`, `%${username}%`, `%${categoria}%`, `%${marca}%`, `%${estado}%`, precioMax, precioMin])
+    return executeQuery(`SELECT p.*, u.username as username, u.trusted as trusted FROM productos as p, usuarios as u WHERE p.nombre LIKE ? AND u.username LIKE ? AND p.categoria LIKE ? AND p.marca LIKE ? AND p.estado LIKE ? AND p.precio <= ? AND p.precio >= ? AND u.id = p.usuario_id order by p.id desc`, [`%${nombre}%`, `%${username}%`, `%${categoria}%`, `%${marca}%`, `%${estado}%`, precioMax, precioMin])
 }
 
 
