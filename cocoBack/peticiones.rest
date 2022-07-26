@@ -194,10 +194,14 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 
 ###
 
-GET http://localhost:3000/api/coleccion
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MTY5MzIsImlhdCI6MTY1ODgzMDUzMn0.dPzxQHvD9LtEpxFSULeHaRF05v-OsMDbXaOikAJnx_c
+GET http://localhost:3000/api/colecciones/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
 
 ###
 
 GET http://localhost:3000/api/colecciones/usuario/3
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MTY5MzIsImlhdCI6MTY1ODgzMDUzMn0.dPzxQHvD9LtEpxFSULeHaRF05v-OsMDbXaOikAJnx_c
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
+
+###
+GET http://localhost:3000/api/colecciones/ultimasColecciones
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
