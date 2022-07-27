@@ -199,5 +199,23 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 
 ###
 
+<<<<<<< HEAD
 GET http://localhost:3000/api/usuarios/mis-productos/2
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+=======
+GET http://localhost:3000/api/colecciones/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
+
+###
+
+GET http://localhost:3000/api/colecciones/usuario/3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
+
+###
+GET http://localhost:3000/api/colecciones/ultimasColecciones
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
+
+###
+GET http://localhost:3000/api/colecciones/codigo/Mi infancia 1657876820
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
+>>>>>>> feature/cositasdecoleccion
