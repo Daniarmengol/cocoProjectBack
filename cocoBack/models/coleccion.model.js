@@ -20,6 +20,11 @@ const getByNombre = (nombre) => {
     return executeQuery(`SELECT * FROM colecciones WHERE colecciones LIKE ?`, [`%${nombre}%`])
 }
 
+const getByCodigo = (codigo) => {
+
+    return executeQuery(`SELECT productos.*,colecciones.titulo FROM productos, colecciones WHERE productos.id = colecciones.producto_id AND colecciones.codigo = ?`, [codigo])
+}
+
 const getCollectionByUserId = (id) => {
     return executeQuery(`SELECT group_concat(colecciones.producto_id SEPARATOR '/') AS id_productos_coleccion, colecciones.*, usuarios.* FROM colecciones, usuarios WHERE colecciones.usuario_id = usuarios.id AND colecciones.usuario_id = ? GROUP BY codigo`, [id])
 }
@@ -45,4 +50,4 @@ const edit = (id, { nombre, precio, categoria, imagen, marca, estado }) => {
 
 
 
-module.exports = { getAll, getById, getByCategoria, getByNombre, deleteById, create, edit, getCollectionByUserId, getLastCollections }
+module.exports = { getAll, getById, getByCategoria, getByNombre, getByCodigo, deleteById, create, edit, getCollectionByUserId, getLastCollections }

@@ -21,8 +21,8 @@ router.get('/:id', checkToken, (req, res) => {
         .catch(err => res.json(err))
 });
 
-router.get('/colecciones/:colecciones', checkToken, (req, res) => {
-    Coleccion.getByCategoria(req.params.categoria)
+router.get('/codigo/:codigo', checkToken, (req, res) => {
+    Coleccion.getByCodigo(req.params.codigo)
         .then(result => res.json(result))
         .catch(err => res.json(err))
 });
