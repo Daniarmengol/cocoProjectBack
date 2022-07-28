@@ -147,16 +147,18 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 Content-Type: application/json
 
 {
-    "nombre": "castlevania sotn PS1",
-    "categoria": "videojuegos",
-    "marca": "Konami",
+    "nombre": "caja de musica",
+    "categoria": "musica",
+    "marca": "artesania",
+    "imagen": "",
     "estado": "usado",
-    "usuario_id": 1
+    "descripcion":"suena feten",
+    "usuario_id":2
 }
 
 ###
 
-DELETE  http://localhost:3000/api/productos/eliminar/10
+DELETE  http://localhost:3000/api/productos/eliminar/7
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
 
 ###
@@ -199,10 +201,12 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 
 ###
 
-<<<<<<< HEAD
 GET http://localhost:3000/api/usuarios/mis-productos/2
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
-=======
+
+###
+
+
 GET http://localhost:3000/api/colecciones/
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
 
@@ -218,4 +222,3 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUi
 ###
 GET http://localhost:3000/api/colecciones/codigo/Mi infancia 1657876820
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTg5NDgwODMsImlhdCI6MTY1ODg2MTY4M30.0IzOD8j5o7LuCHX65zNwO-a3w09cTYudQzPXAzeikU0
->>>>>>> feature/cositasdecoleccion

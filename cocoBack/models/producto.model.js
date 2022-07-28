@@ -48,9 +48,9 @@ const getSearch = ({ nombre, username, categoria, marca, precioMax, precioMin, e
 }
 
 
-const create = ({ nombre, precio = null, categoria, imagen = `https://i.imgur.com/b90NgSA.png`, marca, estado, usuario_id }) => {
-    return executeQuery(`INSERT INTO productos (nombre, precio, categoria, imagen, marca, estado, usuario_id)
-    VALUES (?,?,?,?,?,?,?);`, [nombre, precio, categoria, imagen, marca, estado, usuario_id]);
+const create = ({ nombre, precio = null, categoria, imagen = null, marca, estado, descripcion, usuario_id }) => {
+    console.log(nombre, precio, categoria, imagen, marca, estado, descripcion, usuario_id)
+    return executeQuery(`INSERT INTO productos (nombre, precio, categoria, imagen, marca, estado, descripcion, usuario_id) VALUES (?,?,?,?,?,?,?,?)`, [nombre, precio, categoria, imagen, marca, estado, descripcion, usuario_id]);
 }
 
 const deleteById = (id) => {
