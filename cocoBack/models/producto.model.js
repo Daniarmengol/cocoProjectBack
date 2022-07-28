@@ -6,7 +6,7 @@ const getAll = () => {
 
 /* me trae la informacion del usuario (username, email,trusted) a traves del producto */
 const getProductosVenta = () => {
-    return executeQuery(`select productos.*, usuarios.username, usuarios.trusted
+    return executeQuery(`select productos.*, usuarios.username, usuarios.trusted, usuarios.rating as rating
     from productos, usuarios
     where productos.usuario_id = usuarios.id
     and productos.precio is not null
