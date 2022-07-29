@@ -147,13 +147,14 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 Content-Type: application/json
 
 {
-    "nombre": "caja de musica",
-    "categoria": "musica",
-    "marca": "artesania",
-    "imagen": "",
+    "nombre": "figura bloodborne",
+    "categoria": "videojuegos",
+    "marca": "figuras",
+    "precio": 0,
+    "imagen": "https://www.milcomics.com/1267107-medium_default/bloodborne-the-old-hunters-figura-figma-hunter-the-old-hunters-edition-15-cm.jpg",
     "estado": "usado",
-    "descripcion":"suena feten",
-    "usuario_id":2
+    "descripcion": "muy bonita de vd eh que es muy chula",
+    "usuario_id": 1
 }
 
 ###

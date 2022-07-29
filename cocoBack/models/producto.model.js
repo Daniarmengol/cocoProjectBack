@@ -14,7 +14,7 @@ const getProductosVenta = () => {
 }
 
 const getById = (id) => {
-    return executeQueryOne(`select productos.*, usuarios.username as username, usuarios.trusted as trusted, usuarios.avatar as avatar
+    return executeQueryOne(`select productos.*, usuarios.username as username, usuarios.trusted as trusted, usuarios.avatar as avatar, usuarios.rating, usuarios.fecha_registro
     from productos, usuarios
     where productos.usuario_id = usuarios.id
     and productos.id = ?`, [id])
@@ -48,8 +48,9 @@ const getSearch = ({ nombre, username, categoria, marca, precioMax, precioMin, e
 }
 
 
-const create = ({ nombre, precio = null, categoria, imagen = null, marca, estado, descripcion, usuario_id }) => {
-    console.log(nombre, precio, categoria, imagen, marca, estado, descripcion, usuario_id)
+const create = ({ nombre, precio, categoria, imagen, marca, estado, descripcion, usuario_id }) => {
+    console.log('model', { nombre, precio, categoria, imagen, marca, estado, descripcion, usuario_id })
+
     return executeQuery(`INSERT INTO productos (nombre, precio, categoria, imagen, marca, estado, descripcion, usuario_id) VALUES (?,?,?,?,?,?,?,?)`, [nombre, precio, categoria, imagen, marca, estado, descripcion, usuario_id]);
 }
 

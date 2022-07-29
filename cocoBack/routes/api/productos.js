@@ -51,6 +51,18 @@ router.get('/usuario/:usuario_id', (req, res) => {
         .catch(err => res.json(err))
 });
 
+router.post('/nuevo', (req, res) => {
+    console.log(req.body)
+    Producto.create(req.body)
+        .then(result => res.json({
+            success: result,
+            producto: req.body
+        }))
+        .catch(err => res.json({
+            error: err.message
+        }))
+})
+
 router.post('/productos_venta/busqueda', (req, res) => {
 
     let busqueda = new Object({
@@ -88,16 +100,7 @@ router.patch('/editar/:id', (req, res) => {
             .catch(err => res.json(err))
     }); */
 
-router.post('/nuevo', (req, res) => {
-    Producto.create(req.body)
-        .then(result => res.json({
-            success: result,
-            producto: req.body
-        }))
-        .catch(err => res.json({
-            error: err.message
-        }))
-})
+
 
 router.delete('/eliminar/:id', (req, res) => {
     Producto.deleteById(req.params.id)
