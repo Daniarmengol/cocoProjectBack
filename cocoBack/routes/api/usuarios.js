@@ -174,10 +174,15 @@ router.post('/emailduplicado', async (req, res) => {
 })
 
 router.patch('/editar/:userId/user-info', checkToken, async (req, res) => {
-    const { userId } = req.params;
+    const user = req.user;
+    const { email } = req.body;
+
+    const emailCheck = await Usuario.getStrictEmail(email);
+    if (email !== user.email && emailCheck) return res.json({ error: 'El email ya existe' });
+
     try {
-        const result = await Usuario.update(userId, req.body);
-        res.json(result);
+        const result = await Usuario.update(user.id, req.body);
+        res.json({ success: 'Usuario editado correctamente!', result });
     } catch (err) {
         res.json({ msg: err.message, error: err })
     };

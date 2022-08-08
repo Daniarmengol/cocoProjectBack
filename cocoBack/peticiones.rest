@@ -3,12 +3,12 @@
 ###############################################################
 
 GET http://localhost:3000/api/usuarios
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/usuarios/3
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
@@ -18,22 +18,22 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUi
 ###
 
 GET http://localhost:3000/api/usuarios/nombre/d
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/usuarios/email/gmail
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/usuarios/username/p
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/usuarios/trust/0
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
@@ -61,29 +61,27 @@ POST http://localhost:3000/api/usuarios/login
 Content-Type: application/json
 
 {
-    "username": "Pitagorax",
-    "email": "pbustamantebud@gmail.com",
-    "password": "P12345"
+    "username": "J1Loop",
+    "password": "J12345"
 }
 
 ###
 
-PATCH http://localhost:3000/api/usuarios/editar/3/user-info
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+PATCH http://localhost:3000/api/usuarios/editar/1/user-info
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 Content-Type: application/json
 
 {
-    "direccion": "Avda América Urb Triana 22 11204",
-    "nombre": "Daniel",
-    "apellidos": "Fernández Armengol",
-    "fecha_nacimiento": "1996-09-04",
-    "avatar": "https://i.imgur.com/i2RTPH1.jpeg"
+    "nombre": "Jorge",
+    "apellidos": "Utrera Alarcón",
+    "discord": "Loop#9551",
+    "avatar": "https://i.imgur.com/gXnVbnc.png"
 }
 
 ###
 
 PATCH http://localhost:3000/api/usuarios/editar/8/login-info
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 Content-Type: application/json
 
 {
@@ -95,55 +93,55 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3000/api/usuarios/7
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###############################################################
 ### //PETICIONES -- PRODUCTOS --
 ###############################################################
 
 GET http://localhost:3000/api/productos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/productos/productos_venta
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 
 ###
 
 GET http://localhost:3000/api/productos/categoria/videojuegos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/productos/estado/usado
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/productos/marca/ap
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/productos/usuario/4
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/productos/producto/2
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/productos/nombre/malenia/categoria/figuras/precioMax/500/precioMin/15/marca/bandai/estado/usado
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 POST http://localhost:3000/api/productos/nuevo
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 Content-Type: application/json
 
 {
@@ -160,12 +158,12 @@ Content-Type: application/json
 ###
 
 DELETE  http://localhost:3000/api/productos/eliminar/7
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 PATCH  http://localhost:3000/api/productos/editar/1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 Content-Type: application/json
 
 {
@@ -193,17 +191,17 @@ GET https://maps.googleapis.com/maps/api/geocode/json?address=Juan%20II%20Pinto%
 ###
 
 GET http://localhost:3000/api/usuarios/username/strict/J1Loop
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/usuarios/token/check
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
 GET http://localhost:3000/api/usuarios/mis-productos/2
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
 
 ###
 
