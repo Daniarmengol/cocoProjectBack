@@ -105,7 +105,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUi
 ###
 
 GET http://localhost:3000/api/productos/productos_venta
+<<<<<<< HEAD
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
+=======
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NjAwNzcxMjMsImlhdCI6MTY1OTk5MDcyM30.Uy_G2puyTGiYOk1RE0szn8VKlN0NA89CRB1rUqzZVXU
+>>>>>>> feature/retoques_pita
 
 
 ###
@@ -136,7 +140,28 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUi
 ###
 
 GET http://localhost:3000/api/productos/nombre/malenia/categoria/figuras/precioMax/500/precioMin/15/marca/bandai/estado/usado
+<<<<<<< HEAD
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cERhdGUiOjE2NjAwNjY3NjYsImlhdCI6MTY1OTk4MDM2Nn0.KOoPCgxZuSNvILKRpIAwlPdkng2AZeDVCU5MTKy79d8
+=======
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NjAwNzcxMjMsImlhdCI6MTY1OTk5MDcyM30.Uy_G2puyTGiYOk1RE0szn8VKlN0NA89CRB1rUqzZVXU
+
+###
+
+POST http://localhost:3000/api/productos/nuevo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImV4cERhdGUiOjE2NTg5MjI4OTgsImlhdCI6MTY1ODgzNjQ5OH0.tC5IGCxVY8OrXf1yltJ3teh_8Z6j6cOPd3f7pNy13ps
+Content-Type: application/json
+
+{
+    "nombre": "figura bloodborne",
+    "categoria": "videojuegos",
+    "marca": "figuras",
+    "precio": 0,
+    "imagen": "https://www.milcomics.com/1267107-medium_default/bloodborne-the-old-hunters-figura-figma-hunter-the-old-hunters-edition-15-cm.jpg",
+    "estado": "usado",
+    "descripcion": "muy bonita de vd eh que es muy chula",
+    "usuario_id": 1
+}
+>>>>>>> feature/retoques_pita
 
 ###
 

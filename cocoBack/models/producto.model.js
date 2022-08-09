@@ -14,7 +14,7 @@ const getProductosVenta = () => {
 }
 
 const getById = (id) => {
-    return executeQueryOne(`select productos.*, usuarios.username as username, usuarios.trusted as trusted, usuarios.avatar as avatar, usuarios.rating, usuarios.fecha_registro
+    return executeQueryOne(`select productos.*, usuarios.discord as discord, usuarios.id as userId, usuarios.username as username, usuarios.trusted as trusted, usuarios.avatar as avatar, usuarios.rating, usuarios.fecha_registro
     from productos, usuarios
     where productos.usuario_id = usuarios.id
     and productos.id = ?`, [id])
@@ -44,7 +44,7 @@ const getByUsuarioId = (usuario_id) => {
 const getSearch = ({ nombre, username, categoria, marca, precioMax, precioMin, estado }) => {
 
     console.log(nombre, username, categoria, marca, precioMax, precioMin, estado)
-    return executeQuery(`SELECT p.*, u.username as username, u.trusted as trusted FROM productos as p, usuarios as u WHERE p.nombre LIKE ? AND u.username LIKE ? AND p.categoria LIKE ? AND p.marca LIKE ? AND p.estado LIKE ? AND p.precio <= ? AND p.precio >= ? AND u.id = p.usuario_id order by p.id desc`, [`%${nombre}%`, `%${username}%`, `%${categoria}%`, `%${marca}%`, `%${estado}%`, precioMax, precioMin])
+    return executeQuery(`SELECT p.*, u.rating as rating, u.username as username, u.trusted as trusted FROM productos as p, usuarios as u WHERE p.nombre LIKE ? AND u.username LIKE ? AND p.categoria LIKE ? AND p.marca LIKE ? AND p.estado LIKE ? AND p.precio <= ? AND p.precio >= ? AND u.id = p.usuario_id order by p.id desc`, [`%${nombre}%`, `%${username}%`, `%${categoria}%`, `%${marca}%`, `%${estado}%`, precioMax, precioMin])
 }
 
 
