@@ -4,20 +4,12 @@ const getAll = () => {
     return executeQuery(`SELECT * FROM productos`)
 }
 
-/* me trae la informacion del usuario (username, email,trusted) a traves del producto */
 const getProductosVenta = () => {
-    return executeQuery(`select productos.*, usuarios.username, usuarios.trusted, usuarios.rating as rating
-    from productos, usuarios
-    where productos.usuario_id = usuarios.id
-    and productos.precio is not null
-    order by productos.id desc`)
+    return executeQuery(`select productos.*, usuarios.username, usuarios.trusted, usuarios.rating as rating from productos, usuarios where productos.usuario_id = usuarios.id and productos.precio > 0 order by productos.id desc`)
 }
 
 const getById = (id) => {
-    return executeQueryOne(`select productos.*, usuarios.discord as discord, usuarios.id as userId, usuarios.username as username, usuarios.trusted as trusted, usuarios.avatar as avatar, usuarios.rating, usuarios.fecha_registro
-    from productos, usuarios
-    where productos.usuario_id = usuarios.id
-    and productos.id = ?`, [id])
+    return executeQueryOne(`select productos.*, usuarios.discord as discord, usuarios.id as userId, usuarios.username as username, usuarios.trusted as trusted, usuarios.avatar as avatar, usuarios.rating, usuarios.fecha_registro from productos, usuarios where productos.usuario_id = usuarios.id and productos.id = ?`, [id])
 }
 
 const getByCategoria = (categoria) => {
