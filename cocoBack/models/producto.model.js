@@ -5,7 +5,7 @@ const getAll = () => {
 }
 
 const getProductosVenta = () => {
-    return executeQuery(`select productos.*, usuarios.username, usuarios.trusted, usuarios.rating as rating from productos, usuarios where productos.usuario_id = usuarios.id and productos.precio > 0 order by productos.id desc`)
+    return executeQuery(`select productos.*, usuarios.avatar as avatar, usuarios.username, usuarios.trusted, usuarios.rating as rating from productos, usuarios where productos.usuario_id = usuarios.id and productos.precio > 0 order by productos.id desc`)
 }
 
 const getById = (id) => {
