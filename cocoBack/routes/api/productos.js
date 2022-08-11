@@ -80,10 +80,20 @@ router.post('/productos_venta/busqueda', (req, res) => {
         .catch(err => res.json(err))
 });
 
-router.patch('/editar/:id', (req, res) => {
-    Producto.edit(req.params.id, req.body)
-        .then(result => res.json(result))
-        .catch(err => res.json(err))
+router.patch('/editar/:id', async (req, res) => {
+    try {
+        const result = await Producto.edit(req.params.id, req.body);
+        res.json({ success: 'Producto editado correctamente!', result })
+
+    } catch (err) {
+        res.json({ msg: err.message, error: err })
+    }
+    /* Producto.edit(req.params.id, req.body)
+        .then(result => {
+            console.log(result)
+            res.json({ success: 'Producto editado correctamente!', result })
+        })
+        .catch(err => res.json(err)) */
 });
 
 /* router.post('/nuevo',
