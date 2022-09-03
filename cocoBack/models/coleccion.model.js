@@ -35,8 +35,8 @@ const deleteById = (id) => {
 }
 
 // El usuario_id no debe pasarse por body, debe sacarse del token
-const create = ({ usuario_id, producto_id, titulo, fecha_creacion, categoria, codigo }) => {
-    return executeQuery(`INSERT INTO colecciones (usuario_id, producto_id, titulo, fecha_creacion, categoria, codigo) VALUES (?,?,?,?,?,?);`, [usuario_id, producto_id, titulo, fecha_creacion, categoria, codigo]);
+const create = ({ usuario_id, producto_id, titulo, categoria, codigo }) => {
+    return executeQuery(`INSERT INTO colecciones (usuario_id, producto_id, titulo, categoria, codigo) VALUES (?,?,?,?,?);`, [usuario_id, producto_id, titulo, categoria, codigo]);
 }
 
 //Comprobar primero que el usuario_id de la coleeción coincide con el usuario logueado del token
