@@ -30,8 +30,8 @@ const getCollectionByUserId = (id) => {
 }
 
 //Comprobar primero que el usuario_id de la coleeción coincide con el usuario logueado del token
-const deleteById = (id) => {
-    return executeQuery(`DELETE FROM productos WHERE id = ?`, [id])
+const deleteByCode = (codigo) => {
+    return executeQuery(`DELETE FROM colecciones WHERE codigo = ?`, [codigo])
 }
 
 // El usuario_id no debe pasarse por body, debe sacarse del token
@@ -49,4 +49,4 @@ const edit = (id, { nombre, precio, categoria, imagen, marca, estado }) => {
 
 
 
-module.exports = { getAll, getById, getByCategoria, getByNombre, getByCodigo, deleteById, create, edit, getCollectionByUserId, getLastCollections }
+module.exports = { getAll, getById, getByCategoria, getByNombre, getByCodigo, deleteByCode, create, edit, getCollectionByUserId, getLastCollections }

@@ -56,8 +56,8 @@ router.post('/nuevo', checkToken, (req, res) => {
 
 });
 
-router.delete('/eliminar/:id', checkToken, (req, res) => {
-    Producto.deleteById(req.params.id)
+router.delete('/eliminar/:codigo', checkToken, (req, res) => {
+    Producto.deleteByCode(req.params.codigo)
         .then(result => res.json(result))
         .catch(err => res.json(err))
 });
