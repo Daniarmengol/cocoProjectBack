@@ -35,9 +35,8 @@ const deleteById = (id) => {
 }
 
 // El usuario_id no debe pasarse por body, debe sacarse del token
-const create = ({ nombre, categoria, imagen = `https://imgur.com/OdaDtxa`, usuario_id, fecha_creacion }) => {
-    return executeQuery(`INSERT INTO productos (nombre, precio, categoria, imagen, marca, estado, usuario_id)
-    VALUES (?,?,?,?,?,?,?);`, [nombre, precio, categoria, imagen, usuario_id, fecha_creacion]);
+const create = ({ usuario_id, producto_id, titulo, fecha_creacion, categoria, codigo }) => {
+    return executeQuery(`INSERT INTO colecciones (usuario_id, producto_id, titulo, fecha_creacion, categoria, codigo) VALUES (?,?,?,?,?,?);`, [usuario_id, producto_id, titulo, fecha_creacion, categoria, codigo]);
 }
 
 //Comprobar primero que el usuario_id de la coleeción coincide con el usuario logueado del token

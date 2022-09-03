@@ -45,16 +45,16 @@ router.patch('/editar/:id', checkToken, (req, res) => {
         .catch(err => res.json(err))
 });
 
-router.post('/nuevo', checkToken,
-    (req, res) => {
-        const errors = validationResult(req)
-        if (!errors.isEmpty()) {
-            return res.json(errors.array())
-        }
-        Coleccion.create(req.body)
-            .then(result => res.json(result))
-            .catch(err => res.json(err))
-    });
+router.post('/nuevo', checkToken, (req, res) => {
+    /*   const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+          return res.json(errors.array())
+      } */
+    Coleccion.create(req.body)
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+
+});
 
 router.delete('/eliminar/:id', checkToken, (req, res) => {
     Producto.deleteById(req.params.id)
