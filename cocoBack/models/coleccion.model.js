@@ -22,7 +22,7 @@ const getByNombre = (nombre) => {
 
 const getByCodigo = (codigo) => {
 
-    return executeQuery(`SELECT productos.*,colecciones.titulo FROM productos, colecciones WHERE productos.id = colecciones.producto_id AND colecciones.codigo = ?`, [codigo])
+    return executeQuery(`SELECT productos.*,colecciones.titulo, usuarios.username, usuarios.rating, usuarios.trusted FROM productos, colecciones, usuarios WHERE usuarios.id = productos.usuario_id AND productos.id = colecciones.producto_id AND colecciones.codigo = ?`, [codigo])
 }
 
 const getCollectionByUserId = (id) => {

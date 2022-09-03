@@ -34,7 +34,7 @@ router.get('/nombre/:nombre', checkToken, (req, res) => {
 });
 
 router.get('/usuario/:usuario_id', checkToken, (req, res) => {
-    Coleccion.getCollectionByUserId(req.user.id)
+    Coleccion.getCollectionByUserId(req.params.usuario_id)
         .then(result => res.json(result))
         .catch(err => res.json(err))
 });
