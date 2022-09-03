@@ -40,6 +40,10 @@ const getProductosByUser = (id) => {
     return executeQuery(`SELECT productos.*, usuarios.username as username FROM productos, usuarios  WHERE productos.usuario_id = usuarios.id AND productos.usuario_id = ?`, [id])
 }
 
+const getColeccionesByUser = (id) => {
+    return executeQuery(`SELECT colecciones.* , usuarios.username as username FROM productos, usuarios  WHERE productos.usuario_id = usuarios.id AND productos.usuario_id = ?`, [id])
+}
+
 const create = ({ username, email, password, direccion, nombre, apellidos, fecha_nacimiento }) => {
     return executeQuery(
         `INSERT INTO usuarios (username, email, password, direccion, nombre, apellidos, fecha_nacimiento, trusted)
@@ -60,4 +64,4 @@ const deleteById = (userId) => {
 }
 
 
-module.exports = { getAll, getById, getByUsername, getStrictUsername, getByEmail, getStrictEmail, getByNombre, getByTrust, create, update, updateLoginInfo, deleteById, getRandomTrusted, getProductosByUser };
+module.exports = { getAll, getById, getByUsername, getStrictUsername, getByEmail, getStrictEmail, getByNombre, getByTrust, create, update, updateLoginInfo, deleteById, getRandomTrusted, getProductosByUser, getColeccionesByUser };

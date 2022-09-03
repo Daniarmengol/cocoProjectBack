@@ -105,6 +105,11 @@ router.get('/mis-productos/:id', (req, res) => {
         .then(result => res.json(result))
         .catch(err => res.json(err))
 });
+router.get('/mis-colecciones/:id', (req, res) => {
+    Usuario.getColeccionesByUser(req.params.id)
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+});
 
 router.post('/registro', async (req, res) => {
     console.log(req.body)
